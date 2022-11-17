@@ -4,11 +4,13 @@ from random import randint
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtWidgets import QWidget, QApplication
 from PyQt5 import uic
+from UI import Ui_Form
 
 
-class DrawYellowCircle(QWidget):
+class DrawYellowCircle(QWidget, Ui_Form):
     def __init__(self):
         super().__init__()
+        self.setupUi()
         uic.loadUi('UI.ui', self)
         self.initUI()
         self.draw = False
