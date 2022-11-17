@@ -29,7 +29,7 @@ class DrawYellowCircle(QWidget):
             qp.end()
 
     def draw_yellow_circle(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
+        qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
         for i in range(30):
             r = randint(0, 100)
             qp.drawEllipse(randint(0, 300), randint(0, 300), r, r)
