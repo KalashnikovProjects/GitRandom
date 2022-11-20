@@ -10,14 +10,14 @@ from UI import Ui_Form
 class DrawYellowCircle(QWidget, Ui_Form):
     def __init__(self):
         super().__init__()
-        self.setupUi()
+        self.setupUi(self)
         uic.loadUi('UI.ui', self)
         self.initUI()
         self.draw = False
 
     def initUI(self):
         self.setGeometry(300, 300, 400, 400)
-        self.btn.clicked.connect(self.run)
+        self.pushButton.clicked.connect(self.run)
 
     def run(self):
         self.draw = True
